@@ -1,0 +1,12 @@
+*.sw[a-p]
+tags
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info
+
+build/
+dist/
+.ropeproject
+.pytest_cache/
