@@ -5,6 +5,11 @@ Generating peewee query expression against json payload.
 Like [Django Filter](https://github.com/carltongibson/django-filter) but works with [peewee](https://github.com/coleifer/peewee).
 
 
+```
+pip install peewee_filters
+```
+
+
 ```python
 from xxx.models import Book
 from peewee_filters import FilterSet,
@@ -32,7 +37,7 @@ sql_str = db.cursor().mogrify(*Book.select().where(expr).sql()).decode()
 print(sql_str)
 ```
 
-OUT:
+**Output:**
 
 ```sql
 SELECT "t1"."id",
