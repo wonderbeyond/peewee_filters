@@ -12,8 +12,7 @@ pip install peewee_filters
 
 ```python
 from xxx.models import Book
-from peewee_filters import FilterSet,
-Filter, OP
+from peewee_filters import FilterSet, Filter, OP
 
 
 class BookFilter(FilterSet):
@@ -43,11 +42,8 @@ print(sql_str)
 SELECT "t1"."id",
        "t1"."title",
        "t1"."description",
-       "t1"."contributors",
-       "t1"."deleted",
        "t1"."category",
        "t1"."tags",
-       "t1"."acp"
 FROM "book" AS "t1" WHERE (
     (("t1"."category" IN ('Programming')) AND ("t1"."tags" @> ARRAY['Python','Postgresql']::VARCHAR(255)[]))
     AND NOT ("t1"."tags" @> ARRAY['Jupyter']::VARCHAR(255)[]))
